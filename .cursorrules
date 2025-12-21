@@ -1,0 +1,48 @@
+# Cursor Rules for House of Healing
+
+## Project Context
+This project is a modern web application built with Vite, React, TypeScript, and Node.js, integrated with Notion API for content management and multi-language support.
+
+## Important Files to Reference
+- **README.md** - Contains complete project setup instructions, Notion configuration, deployment guide, and project structure
+- **DEPLOYMENT.md** - Contains detailed deployment instructions for Vercel
+
+## Key Project Details
+
+### Tech Stack
+- Frontend: Vite + React 18 + TypeScript
+- Backend: Node.js serverless functions (Vercel)
+- API Integration: Notion API (@notionhq/client)
+- Localization: i18next + react-i18next
+- Deployment: Vercel
+
+### Project Structure
+- `/api/notion/` - Vercel serverless functions for Notion API
+- `/src/components/` - React components (DocumentList, DocumentView, LanguageSelector)
+- `/src/i18n/` - Localization configuration and translation files
+- `/src/services/` - API service functions
+- `/src/types/` - TypeScript type definitions
+
+### Environment Variables
+- `NOTION_API_KEY` - Notion integration token
+- `NOTION_DATABASE_ID` - Notion database ID
+
+### Notion Database Schema
+Required properties:
+- `Title` (Title type)
+- `Slug` (Text type) - URL-friendly identifier
+- `Language` (Select type) - Language codes (en, es, fr, etc.)
+
+## Development Guidelines
+1. Always refer to README.md for setup and configuration details
+2. Follow the existing code structure and patterns
+3. Maintain TypeScript type safety
+4. Support multiple languages through i18n
+5. Ensure Vercel compatibility for serverless functions
+
+## When Making Changes
+- Update README.md if project structure or setup changes
+- Maintain backward compatibility with existing Notion database schema
+- Test localization changes across all supported languages
+- Ensure API routes follow Vercel serverless function patterns
+

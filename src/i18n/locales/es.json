@@ -1,0 +1,20 @@
+{
+  "common": {
+    "loading": "Cargando...",
+    "error": "Ocurrió un error",
+    "notFound": "No encontrado",
+    "back": "Volver",
+    "language": "Idioma"
+  },
+  "documents": {
+    "title": "Documentos",
+    "noDocuments": "No se encontraron documentos",
+    "readMore": "Leer más",
+    "lastUpdated": "Última actualización"
+  },
+  "navigation": {
+    "home": "Inicio",
+    "documents": "Documentos"
+  }
+}
+

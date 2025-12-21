@@ -26,15 +26,24 @@ A modern web application built with Vite, React, TypeScript, and Node.js, integr
 npm install
 ```
 
-3. Create a `.env` file based on `.env.example`:
+3. Create a `.env` file (you can copy from `.env.example`):
 ```bash
 cp .env.example .env
+# Or create manually: touch .env
 ```
 
 4. Add your Notion API credentials to `.env`:
-   - Get your Notion API key from https://www.notion.so/my-integrations
-   - Create a Notion database and get its ID
-   - Add both to your `.env` file
+   ```env
+   NOTION_API_KEY=your_notion_api_key_here
+   NOTION_DATABASE_ID=your_notion_database_id_here
+   PORT=3001
+   ```
+   
+   **To get these values:**
+   - **NOTION_API_KEY**: Follow [Step 1 in Notion Setup](#step-1-create-a-notion-integration) below
+   - **NOTION_DATABASE_ID**: Follow [Steps 2-4 in Notion Setup](#step-2-create-a-notion-database) below
+   
+   > 💡 **Tip**: See the detailed [Notion Setup](#notion-setup) section below for step-by-step instructions with screenshots guidance.
 
 ### Development
 
@@ -73,13 +82,54 @@ npm run build
 
 ### Step 2: Create a Notion Database
 
-1. Create a new database in Notion (Table view)
-2. Add the following properties:
-   - **Title** (Type: Title) - The document title
-   - **Slug** (Type: Text) - Unique identifier (e.g., "getting-started", "about-us")
-   - **Language** (Type: Select) - Language code options:
-     - Add options: `en`, `es`, `fr` (or any other language codes you want)
-   - **Content** - This will be the page content (you'll write content directly in the page)
+#### Creating the Database
+
+1. **Open Notion** and navigate to the page where you want to create the database
+2. **Type `/`** to open the command menu, or click the `+` button
+3. **Type "Table"** or "Database" and select **"Table - Inline"** or **"Table - Full page"**
+   - "Table - Inline" embeds the database in your current page
+   - "Table - Full page" creates a new page with the database
+4. **Click on the database** to start editing it
+
+#### Setting Up Database Properties
+
+Once your database is created, you need to add the required properties:
+
+1. **Title Property** (usually already exists):
+   - The default "Name" column is your Title property
+   - If it's not there, click the `+` at the top of a column
+   - Select "Title" type
+   - Name it "Title"
+
+2. **Add Slug Property**:
+   - Click the `+` button at the top right of the table (next to the last column)
+   - Select property type: **"Text"**
+   - Name it: **"Slug"**
+   - This will store URL-friendly identifiers like "getting-started", "about-us"
+
+3. **Add Language Property**:
+   - Click the `+` button again
+   - Select property type: **"Select"**
+   - Name it: **"Language"**
+   - Click on the property header to edit it
+   - Click "Add options" and add:
+     - `en` (for English)
+     - `es` (for Spanish)
+     - `fr` (for French)
+     - Add any other language codes you need
+   - You can add more languages later
+
+4. **Content**:
+   - The actual document content goes in the page body (not as a property)
+   - When you open a database row/page, you can write content directly in it
+
+#### Database Structure Summary
+
+Your database should have these columns:
+- **Title** (Title type) - Document title
+- **Slug** (Text type) - URL-friendly identifier
+- **Language** (Select type) - Language code (en, es, fr, etc.)
+- **Page content** - Written in the page body when you open each row
 
 ### Step 3: Share Database with Integration
 

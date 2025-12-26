@@ -1,9 +1,19 @@
-import { Link } from 'react-router-dom';
+import { useState, FormEvent } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { studies } from '@/data/studies';
 import './Home.css';
 
 export function Home() {
   const recentStudies = studies.slice(0, 6);
+  const navigate = useNavigate();
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const handleSearch = (e: FormEvent) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      navigate(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
+    }
+  };
 
   return (
     <div className="home">
@@ -13,14 +23,16 @@ export function Home() {
         <p className="hero-subtitle">
           Deep, thoughtful Bible studies to help you grow in faith and understanding
         </p>
-        <div className="hero-search">
+        <form className="hero-search" onSubmit={handleSearch}>
           <input
             type="text"
             placeholder="Search studies, topics, or verses..."
             className="search-bar"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
           />
-          <button className="search-button">Search</button>
-        </div>
+          <button type="submit" className="search-button">Search</button>
+        </form>
       </section>
 
       {/* Recent Studies */}

@@ -7,6 +7,7 @@ import { BookPage } from './pages/BookPage';
 import { TopicPage } from './pages/TopicPage';
 import { StudyTools } from './pages/StudyTools';
 import { About } from './pages/About';
+import { SearchResults } from './pages/SearchResults';
 import './App.css';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/search" element={<SearchResults />} />
           <Route path="/studies/:studyId" element={<StudyPage />} />
           <Route path="/studies/:studyId/pdf" element={<StudyWithPDF />} />
           <Route path="/books/:bookId" element={<BookPage />} />

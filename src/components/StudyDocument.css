@@ -1,0 +1,159 @@
+.study-document {
+  max-width: 900px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.study-header {
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.study-title {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin: 0 0 0.5rem 0;
+  font-weight: 600;
+}
+
+.study-reference {
+  font-size: 1.25rem;
+  color: #7f8c8d;
+  margin: 0;
+  font-style: italic;
+}
+
+.study-section {
+  margin-bottom: 2.5rem;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin: 0 0 1rem 0;
+  font-weight: 600;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 0.5rem;
+}
+
+.bible-passage {
+  background: #f8f9fa;
+  border-left: 4px solid #3498db;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #2c3e50;
+  font-style: italic;
+  border-radius: 4px;
+}
+
+.commentary-content {
+  line-height: 1.8;
+  color: #34495e;
+}
+
+.commentary-content p {
+  margin-bottom: 1rem;
+}
+
+.application-questions {
+  list-style: decimal;
+  padding-left: 1.5rem;
+  line-height: 1.8;
+  color: #34495e;
+}
+
+.application-questions li {
+  margin-bottom: 1rem;
+  padding-left: 0.5rem;
+}
+
+.downloads {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.download-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #3498db;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.download-button:hover {
+  background: #2980b9;
+}
+
+.study-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 2px solid #e0e0e0;
+  gap: 1rem;
+}
+
+.nav-link {
+  padding: 0.75rem 1.5rem;
+  background: #ecf0f1;
+  color: #2c3e50;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  flex: 1;
+  text-align: center;
+}
+
+.nav-link:hover {
+  background: #d5dbdb;
+  transform: translateY(-2px);
+}
+
+.nav-link-previous {
+  text-align: left;
+}
+
+.nav-link-next {
+  text-align: right;
+}
+
+.error-message {
+  text-align: center;
+  padding: 3rem;
+  color: #e74c3c;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .study-document {
+    padding: 1.5rem;
+  }
+
+  .study-title {
+    font-size: 1.5rem;
+  }
+
+  .study-reference {
+    font-size: 1rem;
+  }
+
+  .study-navigation {
+    flex-direction: column;
+  }
+
+  .nav-link {
+    text-align: center !important;
+  }
+}
+

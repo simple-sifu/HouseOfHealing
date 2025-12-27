@@ -4,7 +4,14 @@ export function About() {
   return (
     <div className="about">
       <header className="about-header">
-        <h1 className="about-title">About House of Healing</h1>
+        <div className="about-logo">
+          <img 
+            src="/assets/HouseOfHealing.png" 
+            alt="House of Healing" 
+            className="about-logo-image"
+          />
+        </div>
+        <h1 className="about-title">About</h1>
       </header>
 
       <section className="about-section">

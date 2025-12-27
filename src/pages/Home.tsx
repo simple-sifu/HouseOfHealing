@@ -19,7 +19,14 @@ export function Home() {
     <div className="home">
       {/* Hero Section */}
       <section className="hero">
-        <h1 className="hero-title">Welcome to House of Healing</h1>
+        <div className="hero-logo">
+          <img 
+            src="/assets/HouseOfHealing.png" 
+            alt="House of Healing" 
+            className="hero-logo-image"
+          />
+        </div>
+        <h1 className="hero-title">Welcome</h1>
         <p className="hero-subtitle">
           Deep, thoughtful Bible studies to help you grow in faith and understanding
         </p>

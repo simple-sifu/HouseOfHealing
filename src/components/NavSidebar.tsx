@@ -28,7 +28,11 @@ export function NavSidebar() {
     <aside className="nav-sidebar">
       <div className="sidebar-header">
         <Link to="/" className="logo">
-          <h1>House of Healing</h1>
+          <img 
+            src="/assets/HouseOfHealing.png" 
+            alt="House of Healing" 
+            className="logo-image"
+          />
         </Link>
       </div>
 

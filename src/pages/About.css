@@ -14,6 +14,21 @@
   text-align: center;
 }
 
+.about-logo {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-logo-image {
+  max-width: 250px;
+  width: 100%;
+  height: auto;
+  max-height: 100px;
+  object-fit: contain;
+}
+
 .about-title {
   font-size: 2.5rem;
   color: #2c3e50;
